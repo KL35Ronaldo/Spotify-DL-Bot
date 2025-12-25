@@ -24,9 +24,9 @@ class Config:
     API_TIMEOUT: int = 30
     AUDIO_BITRATE: str = "320"
     AUDIO_FORMAT: str = "mp3"
-    BOT_NAME: str = "@KL35Bot"
+    BOT_NAME: str = os.getenv("BOT_NAME", "@KL35Bot")
     BOT_VERSION: str = "1.0.0"
-    TEMP_STORAGE: int = -1001602310133
+    TEMP_STORAGE: str = os.getenv("TEMP_STORAGE", "-1001602310133")
 
     @classmethod
     def validate(cls) -> bool:
